@@ -1,10 +1,10 @@
-#############################################Creating a class node########################################
+#############################################Creating a node class ########################################
 class Node:
     def __init__(self,data):
         self.data=data
         self.nextnode=None
 
-######################################Creating the class Sorted_Linked_List##########################################
+######################################Creating the class Sorted_Linked_List class ##########################################
 class Sorted_Linked_List:
     def __init__(self):
         self.start=None
