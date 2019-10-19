@@ -1,12 +1,15 @@
+#############################################Creating a node class ########################################
 class Node:
     def __init__(self,data):
         self.data=data
         self.nextnode=None
 
+######################################Creating the class Sorted_Linked_List class ##########################################
 class Sorted_Linked_List:
     def __init__(self):
         self.start=None
 
+#######################################inserting using inorder traversal method #####################################3
     def insert_in_order(self,x):
         #this is the case when the list is empty or the data to be inserted is less than the first node data
         temp=Node(x)
@@ -20,7 +23,8 @@ class Sorted_Linked_List:
             p=p.nextnode
         temp.nextnode=p.nextnode    #these conditions can work for both insertion in last and simple adding case
         p.nextnode=temp
-
+        
+################################here we are finally creating the list to sort#############################################
     def create_list(self):
         n=int(input('enter the number of nodes '))
         if n==0:
@@ -29,7 +33,8 @@ class Sorted_Linked_List:
         for i in range(n):
             data=input('enter the element to be inserted : ')
             self.insert_in_order(data)
-
+            
+############################################search operation in list#######################################################
     def search(self,x):
         if self.start==None:
             print('list is empty')
@@ -48,7 +53,7 @@ class Sorted_Linked_List:
             print(x,' not found')
         else:
             print(x,' found at position ',position)
-
+####################################### display the list #######################################################3
     def display_list(self):
         if self.start==None:
             print('list is empty')
